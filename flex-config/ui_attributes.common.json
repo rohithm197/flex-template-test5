@@ -9,7 +9,13 @@
     "common": {
       "log_level": "info",
       "audit_log_ttl": 1209600,
-      "teams": ["Blue Team", "Red Team", "Gold Team", "VIP Team"],
+      "teams": [ ],
+      "teamList": {
+        "italy":"['IT Customer Support', 'IT Clinical Support', 'IT iTero Support']",
+        "us":"['US Customer Support', 'US Clinical Support', 'US iTero Support', 'US CAD Designers']",
+        "uk":"['UK Customer Support', 'UK Clinical Support']",
+        "fr":"['FR Customer Support', 'FR Clinical Support']"
+      },      
       "departments": [
         "General Management",
         "Marketing",
@@ -84,9 +90,7 @@
         "url_tab_title": "Web Page"
       },
       "internal_call": {
-        "enabled": true,
-        "enable_call_agent": true,
-        "enable_call_queue": true
+        "enabled": true
       },
       "scrollable_activities": {
         "enabled": true
@@ -136,6 +140,7 @@
         "applied_filters": {
           "activities": true,
           "email": true,
+          "location": true,
           "department": true,
           "queue_no_worker_data": false,
           "queue_worker_data": false,
@@ -248,7 +253,10 @@
         "per_queue": {
           "exampleQueueName": {
             "require_disposition": true,
-            "dispositions": ["Promotional Sale", "Renewal"],
+            "dispositions": [
+              "Promotional Sale",
+              "Renewal"
+            ],
             "text_attributes": [],
             "select_attributes": []
           }
@@ -421,10 +429,6 @@
           "side_nav_hover_background": "rgb(225, 227, 234)"
         },
         "component_theme_overrides": {}
-      },
-      "force_conference_region": {
-        "enabled": false,
-        "region": ""
       }
     }
   }
